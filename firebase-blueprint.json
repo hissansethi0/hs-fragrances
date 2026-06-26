@@ -1,0 +1,92 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "A luxury perfume product in the store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "brand": { "type": "string" },
+        "images": { "type": "array" },
+        "price": { "type": "number" },
+        "discountPrice": { "type": "number" },
+        "description": { "type": "string" },
+        "fragranceNotes": { "type": "object" },
+        "category": { "type": "string" },
+        "stockQuantity": { "type": "number" },
+        "rating": { "type": "number" },
+        "reviews": { "type": "array" },
+        "featured": { "type": "boolean" },
+        "bestSeller": { "type": "boolean" }
+      },
+      "required": ["id", "name", "price", "category", "stockQuantity"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account profile with role controls",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "A customer order placement",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "shippingAddress": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "orderStatus": { "type": "string" },
+        "couponUsed": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "customerName", "customerPhone", "items", "totalAmount", "paymentMethod", "orderStatus", "paymentStatus"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "description": "Store discount code",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "discountType": { "type": "string" },
+        "discountValue": { "type": "number" },
+        "minPurchase": { "type": "number" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["id", "code", "discountType", "discountValue", "minPurchase", "active"]
+    }
+  },
+  "firestore": {
+    "products/{productId}": {
+      "schema": "Product",
+      "description": "Store perfumes catalog"
+    },
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Store role-based accounts"
+    },
+    "orders/{orderId}": {
+      "schema": "Order",
+      "description": "Store customer checkouts"
+    },
+    "coupons/{couponId}": {
+      "schema": "Coupon",
+      "description": "Store coupon codes"
+    }
+  }
+}

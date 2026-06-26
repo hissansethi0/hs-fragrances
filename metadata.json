@@ -1,0 +1,8 @@
+{
+  "name": "HS Fragrances",
+  "description": "Modern luxury perfume e-commerce store with role-based auth, premium checkout, order tracking, and interactive dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
