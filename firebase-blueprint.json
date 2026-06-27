@@ -84,9 +84,6 @@
       "schema": "Order",
       "description": "Store customer checkouts"
     },
-    "coupons/{couponId}": {
-      "schema": "Coupon",
-      "description": "Store coupon codes"
-    }
+
   }
 }
