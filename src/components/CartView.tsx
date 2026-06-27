@@ -200,7 +200,7 @@ export default function CartView({
               ) : (
                 <>
                   {/* Cart items list */}
-                  <div className="flex-1 px-6 py-4 space-y-4 overflow-y-auto">
+                <div className="flex-1 px-6 py-4 space-y-4 overflow-y-auto pb-32">
                     {cart.length === 0 ? (
                       <div className="h-64 flex flex-col items-center justify-center text-center space-y-4">
                         <ShoppingBag className="w-12 h-12 text-white/10 animate-pulse" />
