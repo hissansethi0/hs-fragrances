@@ -141,7 +141,7 @@ export default function CartView({
 
         <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
           <div className="pointer-events-auto w-full sm:max-w-lg">
-            <div className="flex h-full flex-col bg-[#050505] border-l border-white/10 shadow-2xl text-white">
+            <div className="flex h-screen flex-col overflow-hidden bg-[#050505] border-l border-white/10 shadow-2xl text-white">
               
               {/* Drawer Header */}
               <div className="px-6 py-6 border-b border-white/10 flex items-center justify-between">
@@ -200,7 +200,7 @@ export default function CartView({
               ) : (
                 <>
                   {/* Cart items list */}
-                <div className="flex-1 px-6 py-4 space-y-4 overflow-y-auto pb-32">
+                <div className="flex-1 overflow-y-auto px-6 py-4 pb-32 space-y-4">
                     {cart.length === 0 ? (
                       <div className="h-64 flex flex-col items-center justify-center text-center space-y-4">
                         <ShoppingBag className="w-12 h-12 text-white/10 animate-pulse" />
@@ -448,7 +448,7 @@ export default function CartView({
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full py-4 bg-[#D4AF37] hover:bg-[#b8962f] text-black font-semibold tracking-widest text-xs uppercase transition-all duration-300 flex items-center justify-center gap-2 focus:outline-none shadow-lg"
+                          className="sticky bottom-0 w-full py-4 bg-[#D4AF37] hover:bg-[#b8962f] text-black font-semibold tracking-widest text-xs uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
                           id="btn-cart-submit-order"
                         >
                           <CreditCard className="w-4 h-4 text-black" />
