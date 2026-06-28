@@ -140,8 +140,8 @@ export default function CartView({
         />
 
         <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-          <div className="pointer-events-auto w-full sm:max-w-lg">
-            <div className="flex h-screen flex-col overflow-hidden bg-[#050505] border-l border-white/10 shadow-2xl text-white">
+          <div className="pointer-events-auto w-screen max-w-md sm:max-w-lg">
+            <div className="flex h-screen flex-col overflow-y-auto bg-[#050505] border-l border-white/10 shadow-2xl text-white">
               
               {/* Drawer Header */}
               <div className="px-6 py-6 border-b border-white/10 flex items-center justify-between">
